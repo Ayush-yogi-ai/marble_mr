@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,450;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-display: "Cinzel", "Playfair Display", serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  /* Marble-specific Luxury Accents */
+  --color-marble-white: #FCFBF9;       /* Creamy Calacatta alabaster base */
+  --color-marble-chalk: #FAF7F2;       /* Soft textured background */
+  --color-marble-gold: #C59B27;        /* Polished gold veins */
+  --color-marble-charcoal: #1F2124;    /* Fine slate quartz lines */
+  --color-marble-beige: #F2ECE1;       /* Warm beige sedimentary layer */
+}
+
+/* Custom visual styles for premium luxury look */
+@layer base {
+  body {
+    @apply antialiased tracking-normal overflow-x-hidden;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Smooth marble line separator */
+.marble-border-gold {
+  border-image: linear-gradient(to right, #C59B27, #E3D3B8, transparent) 1;
+}
+
+/* Polished glass scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(197, 155, 39, 0.15);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(197, 155, 39, 0.4);
+}

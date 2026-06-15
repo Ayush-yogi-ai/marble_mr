@@ -1,0 +1,6 @@
+{
+  "name": "Aurelius Marble Atelier",
+  "description": "Premium marble showroom and offline-first stock ledger for raw block tracking, custom interior stonework commissions, and calcite curation bible logs.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
